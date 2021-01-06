@@ -171,3 +171,5 @@ jobs:
           github token: ${{ secrets.GITHUB_TOKEN }}
       - name: Check cached images
         run: docker images
+      - name: Running tests
+        run: ./ci/sanity/install.sh && ./ci/sanity/sanity.sh
